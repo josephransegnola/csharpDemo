@@ -14,7 +14,7 @@ namespace MongoDBCSharpCRUDExample {
         public TenantsRepository(string connectionString)
         {
             _client = new MongoClient(connectionString);
-            _database = _client.GetDatabase("passly");
+            _database = _client.GetDatabase("databaseName");
             _tenantsCollection = _database.GetCollection<Tenant>("tenants");
         }
 
